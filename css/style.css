@@ -1,0 +1,459 @@
+/*********************************DEFAULT GENERAL STYLE ***********************/
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/******************************NAVBAR GENERAL STYLE ***************************/
+
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+}
+
+.navbar a {
+  border-radius: 30%;
+  color: #181B21;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.navbar a:hover {
+  background-color: #D0D0D0;
+  opacity: 0.5;
+  transform: scale(1.5);
+}
+
+.collapse {
+  display: flex;
+  justify-content: center;
+}
+
+/************************************HOME PAGE STYLE***************************/
+.bird1 {
+  width: 10%;
+  height: 15vh;
+  position: absolute;
+  top: 100px;
+  left: -150px;
+  transform: rotate(180deg);
+  animation: fly 6s linear infinite 3.5s;
+}
+
+.bird2 {
+  width: 10%;
+  height: 15vh;
+  background-color: transparent;
+  position: absolute;
+  top: 175px;
+  left: -150px;
+  transform: rotate(180deg);
+  animation: fly 6s linear infinite 3s;
+}
+
+@keyframes fly {
+  0%{left:-10%;}
+  50%{left:50%;}
+  100%{left:90%;}
+}
+
+
+#first-section {
+  display: flex;
+  align-items: center;
+  background: url("../images/mountain.png");
+  height: 100vh;
+}
+
+#first-section h3, span {
+  font-family: 'Satisfy', cursive;
+  color: white;
+}
+
+#first-section h3 {
+  font-size: 3rem;
+}
+
+#first-section span {
+  font-size: 6rem;
+}
+
+#first-section button {
+  font-size: 1.5rem;
+  padding: 1% 3%;
+}
+
+
+/*************************************Locations STYLE *************************/
+
+#locations {
+  background-color: #fff;
+  position: relative;
+}
+
+.explore-text {
+  position: relative;
+  left: 100px;
+  line-height: 1.6;
+  z-index: 1;
+}
+
+.explore-text h2 {
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'Satisfy', cursive;
+  font-weight: 300;
+  color: #111111;
+  font-size: 3rem;
+}
+
+
+.explore-text p {
+  display: flex;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  color: #111111;
+  font-size: 16px;
+}
+
+.eiffel {
+  display: flex;
+  width: 85%;
+  position: relative;
+}
+
+.photo-places {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 40%;
+  position: relative;
+  left: 12px;
+}
+
+.photo-places img {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  transition: 3s all;
+} 
+
+.photo-places img:hover {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.taj-image {
+  width: 50%;
+  height: 30%;
+  z-index: 1;
+  position: absolute;
+  left: 5%;
+}
+
+.taj-text p {
+  width: 75%;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: 'Lato', sans-serif;
+}
+
+/************************************CAROUSEL STYLE****************************/
+
+#destinations {
+  height: 100vh;
+  background-color: silver;
+}
+
+.venice, .egypt, .dubai {
+  width: 50%;
+  height: 75vh;
+}
+
+.carousel-item {
+  padding: 7% 20% 0;
+}
+
+#destinations a {
+  padding-top: 9%;
+}
+
+/***********************************FOOTER SECTION STYLE ***************************/
+
+#footer {
+  text-align: center;
+  padding: 7% 25%;
+}
+
+#footer i {
+  padding: 0 3% 3% 0;
+}
+
+.copyright p {
+  font-size: 1.5rem;
+  color: #181B21;
+}
+
+/***********************************COLUMN SECTION STYLE ***************************/
+
+#first-column-loc {
+  padding-left: 48px;
+}
+
+#first-column-loc, #second-column-loc {
+  height: 100vh;
+}
+
+#fourth-column-loc {
+  height: 80vh;
+  padding-top: 48px;
+}
+
+/************************************MEDIA QUERY STYLE*************************/
+
+/********************************* 320 PX ************************************/
+
+@media (max-width: 320px) {
+  #first-section {
+    height: 100vh;
+  }
+
+  #first-section h3 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  #first-section span {
+    font-size: 3rem;
+  }
+
+  .dropitems {
+    justify-content: flex-start;
+  }
+
+  #first-column-loc {
+    height: 80vh;
+    padding: 0 12px 0;
+  }
+
+  .explore-text {
+    position: static;
+  }
+
+  .explore-text h2 {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .photo-places {
+    display: none;
+  }
+
+  #second-column-loc {
+    height: 75vh;
+  }
+
+  .eiffel, .taj-image {
+    position: unset;
+    width: 100%;
+    height: 100%;
+  }
+
+  #third-column-loc {
+    height: 50vh;
+  }
+
+  #fourth-column-loc {
+    height: 70vh;
+    padding-top: 0;
+  }
+  
+  #destinations {
+    height: 35vh;
+  }
+
+  #destinations img {
+    height: 20vh;   
+  }
+
+  #footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #footer i {
+    padding-right: 5%;
+  }
+
+}
+
+/********************************* 320 PX -- 768 PX ************************************/
+
+@media (min-width: 320px) and (max-width: 768px) {
+
+  #first-section h3 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  #first-section span {
+    font-size: 3rem;
+  }
+
+  .dropitems {
+    justify-content: flex-start;
+  }
+
+  .explore-text {
+    position: static;
+  }
+
+  .explore-text h2 {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .photo-places {
+    display: none;
+  }
+
+  #first-column-loc {
+    height: 60vh;
+    padding: 0 12px 0;
+  }
+
+  #second-column-loc {
+    height: 75vh;
+  }
+
+  .eiffel, .taj-image {
+    position: unset;
+    width: 100%;
+    height: 100%;
+  }
+
+  #third-column-loc {
+    height: 50vh;
+  }
+
+  #fourth-column-loc {
+    height: 50vh;
+    padding-top: 0;
+  }
+
+  #fourth-column-loc p {
+    width: 100%;
+  }
+  
+  #destinations {
+    height: 60vh;
+  }
+
+  #destinations img {
+    height: 40vh;
+    width: 80%;
+  }
+
+}
+
+/********************************* 768 PX -- 1200 PX ************************************/
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  
+  #first-section h3 {
+    text-align: center;
+    font-size: 3rem;
+  }
+  
+  #first-section span {
+    font-size: 6rem;
+  }
+
+  .explore-text p {
+    font-size: 1.5rem;
+  }
+
+  .explore-text h2 {
+    text-align: center;
+  }
+
+  .explore-text {
+    position: static;
+  }
+
+  .photo-places {
+    display: flex;
+  }
+
+  #first-column-loc {
+    height: 120vh;
+    padding: 0 12px 0;
+  }
+
+  #second-column-loc {
+    height: 85vh;
+  }
+
+  .eiffel, .taj-image {
+    position: unset;
+    width: 100%;
+    height: 100%;
+  }
+
+  #third-column-loc {
+    height: 60vh;
+    padding: 12px 0;
+  }
+
+  #fourth-column-loc {
+    height: 70vh;
+    padding-top: 0;
+  }
+
+}
+
+/********************************* 1080 PX (HEIGHT) ************************************/
+
+@media (min-height: 1080px) { 
+
+  #first-section {
+    background: url("../images/mountain.jpg");   
+  }
+
+  #first-column-loc {
+    height: 100vh;
+    padding: 0 12px 0;
+  }
+
+  .explore-text p {
+    font-size: 2rem;
+  }
+
+  .explore-text h2 {
+    text-align: center;
+    font-size: 5rem;
+  }
+
+  #second-column-loc {
+    height: 85vh;
+  }
+
+  #third-column-loc {
+    height: 70vh;
+  }
+
+}
+
